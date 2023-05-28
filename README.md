@@ -50,3 +50,7 @@
 - NavLink 可以实现路由链接的高亮，通过activeClassName 指定样式名
 - 标签体内容是一个特殊的标签属性 children （默认就有）
 - 通过 this.props.chuldren 可以获取标签体内容
+
+### Switch 的使用
+- 通常情况下， path和component是一一对应的关系
+- Switch可以提高路由匹配效率， 匹配上就直接 break; 不在进行下一个匹配
