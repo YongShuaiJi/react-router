@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Switch,Route} from 'react-router-dom'
+import {Switch,Route,Redirect} from 'react-router-dom'
 import Home from './page/Home'
 import About from './page/About'
 import Header from './components/Header'
@@ -35,6 +35,8 @@ export default class App extends Component {
                   {/* exact={true} == exact 严格匹配*/}
                     <Route path="/about" component={About}></Route>
                     <Route path="/home" component={Home}></Route> 
+                    {/* Redirect 重定向，谁也匹配不上的时候就匹配这个 */}
+                    <Redirect to="/about"></Redirect>
                   </Switch>
                 </div>
               </div>

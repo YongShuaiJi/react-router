@@ -63,4 +63,6 @@
 - 默认使用模糊匹配（输入的路径必须包含匹配的路径，且顺序要一致）
 - 开启严格匹配 `<Route exact  path="/about" component={About}></Route>`
 - 严格匹配不需要一直开启，因为有时候会导致无法匹配二级路由
-                    
+
+### 重定向匹配
+- 当所有路由都匹配不上的时候匹配 Redirect 组件指向的路由 `<Redirect to="/about"></Redirect>`
