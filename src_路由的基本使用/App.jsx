@@ -1,18 +1,17 @@
 import React, { Component } from 'react'
 import {Link,Route} from 'react-router-dom'
-import Home from './page/Home'
-import About from './page/About'
-import Header from './components/Header'
+import Home from './components/Home'
+import About from './components/About'
 
 export default class App extends Component {
-   
+  
   render() {
     return (
       <div id='root'>
         <div>
           <div className="row">
             <div className="col-xs-offset-2 col-xs-8">
-              <Header />
+              <div className="page-header"><h2>React Router Demo</h2></div>
             </div>
           </div>
           <div className="row">
