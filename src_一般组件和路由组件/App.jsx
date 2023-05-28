@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import {NavLink,Route} from 'react-router-dom'
+import {Link,Route} from 'react-router-dom'
 import Home from './page/Home'
 import About from './page/About'
 import Header from './components/Header'
-import styleOther from './App.css'
 
 export default class App extends Component {
    
@@ -20,8 +19,8 @@ export default class App extends Component {
             <div className="col-xs-2 col-xs-offset-2">
               <div className="list-group">
               {/* React中由连接实现切换组件--编写路由链接 */}
-                <NavLink activeClassName="lina" className="list-group-item" to="/about">About</NavLink>
-                <NavLink activeClassName="lina" className="list-group-item" to="/home">Home</NavLink>
+                <Link className="list-group-item" to="/about">About</Link>
+                <Link className="list-group-item" to="/home">Home</Link>
               </div>
             </div>
             <div className="col-xs-6">
