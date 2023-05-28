@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import qs from 'querystringify'
 
 const temp = [
     {id: 1, name:'小王', phone: '13811112222'},
@@ -8,11 +7,7 @@ const temp = [
 ]
 export default class index extends Component {
   render() {
-    // 接收params
-    // const {id, title} = this.props.match.params
-    // 接收search
-    const {search} = this.props.location
-    const {id, title} = qs.parse(search)
+    const {id, title} = this.props.match.params
     const result = temp.find((obj)=>{
         return obj.id == id
     })
