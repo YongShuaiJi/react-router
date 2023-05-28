@@ -32,8 +32,9 @@ export default class App extends Component {
                 <div className="pane1-body">
                 {/* 注册路由 */}
                   <Switch>
+                  {/* exact={true} == exact 严格匹配*/}
                     <Route path="/about" component={About}></Route>
-                    <Route path="/home" component={Home}></Route>
+                    <Route path="/home" component={Home}></Route> 
                   </Switch>
                 </div>
               </div>
