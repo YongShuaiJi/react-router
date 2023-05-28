@@ -46,3 +46,7 @@
 }
 ```
 
+### 组件封装中的一些一般说明
+- NavLink 可以实现路由链接的高亮，通过activeClassName 指定样式名
+- 标签体内容是一个特殊的标签属性 children （默认就有）
+- 通过 this.props.chuldren 可以获取标签体内容
