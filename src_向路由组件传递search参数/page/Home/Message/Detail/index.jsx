@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import qs from 'querystringify'
+import qs from 'querystringify'
 
 const temp = [
     {id: 1, name:'小王', phone: '13811112222'},
@@ -8,20 +8,14 @@ const temp = [
 ]
 export default class index extends Component {
   render() {
-    console.log('this.props=',this.props)
     // 接收params
     // const {id, title} = this.props.match.params
-
     // 接收search
-    // const {search} = this.props.location
-    // const {id, title} = qs.parse(search)
-
-    // 接收state
-    const {id, title} = this.props.location.state || {}
-
+    const {search} = this.props.location
+    const {id, title} = qs.parse(search)
     const result = temp.find((obj)=>{
         return obj.id == id
-    }) || {}
+    })
     return (
       <div>
         <ul>

@@ -73,6 +73,16 @@
 
 ### 向路由组件传递参数
 - params参数
- - 路由链接（携带参数）： `<NavLink to={`/home/message/detail/${messageObj.id}/${messageObj.title}`}>{messageObj.title}</NavLink>`
- - 注册路由（声明接收）： `<Route path='/home/message/detail/:id/:title' component={Detail}></Route>`
- - 接收参数： `const {id, title} = this.props.match.params`
+    - 路由链接（携带参数）： `<NavLink to={`/home/message/detail/${messageObj.id}/${messageObj.title}`}>{messageObj.title}</NavLink>`
+    - 注册路由（声明接收）： `<Route path='/home/message/detail/:id/:title' component={Detail}></Route>`
+    - 接收参数： `const {id, title} = this.props.match.params`
+- search 参数
+    - 路由连接（携带参数）：`<NavLink to={`/home/message/detail/?id=${messageObj.id}&title=${messageObj.title}`}>{messageObj.title}</NavLink>`
+    - 注册路由（无需声明正常注册时即可）：`<Route path='/home/message/detail' component={Detail}></Route>`
+    - 接收参数：`const {search} = this.props.location`
+    - 备注：获取到的search是urlencoded编码的字符串，需要解析
+- state 参数
+    - 路由连接（携带参数）：`<NavLink to={{pathname:'/home/message/detail/', state:{id:messageObj.id,title:messageObj.title}}}>{messageObj.title}</NavLink>`
+    - 注册路由（无需声明正常注册时即可）：`<Route path='/home/message/detail' component={Detail}></Route>`
+    - 接收参数：`const {id, title} = this.props.location.state || {}`
+    - 备注：复制url 到别的页面打开，数据会丢失

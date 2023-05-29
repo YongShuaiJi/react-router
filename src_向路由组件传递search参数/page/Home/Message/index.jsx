@@ -21,9 +21,7 @@ export default class index extends Component {
                 {/* 向路由组件传params参数 */}
                 {/* <NavLink to={`/home/message/detail/${messageObj.id}/${messageObj.title}`}>{messageObj.title}</NavLink> */}
                 {/* 向路由组件传search参数 */}
-                {/* <NavLink to={`/home/message/detail/?id=${messageObj.id}&title=${messageObj.title}`}>{messageObj.title}</NavLink> */}
-                {/* 向路由组件传递state参数 */}
-                <NavLink to={{pathname:'/home/message/detail/', state:{id:messageObj.id,title:messageObj.title}}}>{messageObj.title}</NavLink>
+                <NavLink to={`/home/message/detail/?id=${messageObj.id}&title=${messageObj.title}`}>{messageObj.title}</NavLink>
               </li>
             )
           })
@@ -33,8 +31,6 @@ export default class index extends Component {
       {/* params参数声明接收 */}
       {/* <Route path='/home/message/detail/:id/:title' component={Detail}></Route> */}
       {/* search 参数无需声明接收，正常注册路由即可 */}
-      {/* <Route path='/home/message/detail' component={Detail}></Route> */}
-      {/* state 参数无需声明接收，正常注册路由即可 */}
       <Route path='/home/message/detail' component={Detail}></Route>
     </div>
     )
