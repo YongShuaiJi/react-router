@@ -23,7 +23,7 @@ export default class index extends Component {
                 {/* 向路由组件传search参数 */}
                 {/* <NavLink to={`/home/message/detail/?id=${messageObj.id}&title=${messageObj.title}`}>{messageObj.title}</NavLink> */}
                 {/* 向路由组件传递state参数 */}
-                <NavLink to={{pathname:'/home/message/detail/', state:{id:messageObj.id,title:messageObj.title}}}>{messageObj.title}</NavLink>
+                <NavLink replace={true} to={{pathname:'/home/message/detail/', state:{id:messageObj.id,title:messageObj.title}}}>{messageObj.title}</NavLink>
               </li>
             )
           })
