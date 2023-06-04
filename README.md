@@ -94,7 +94,7 @@
   - 接收参数：`const {id, title} = this.props.location.state || {}`
   - 备注：复制url 到别的页面打开，数据会丢失
 
-# 编程式路由导航
+### 编程式路由导航
 
 - push跳转
 
@@ -142,3 +142,13 @@
   }
 ```
 
+### withRouter
+- withRouter 可以加工一般组件，让一般组件具备路由组件所持有的API, 返回值是一个新的组件
+
+
+### BrowserRouter 与 HashRouter 的区别
+- BrowserRouter 使用的是H5的 history API， 不兼容IE9及其以下的版本； HashRouter 的路径包含#，例如：localhost:3000/#/demo/test
+- 刷新后对路由的state参数的影响
+    - BrowserRouter 没有任何影响因为，state 保存在history 对象中
+    - HashRouter刷新后会导致路由state 参数的丢失
+- 备注：HashRouter 可以用于解决一些路径错误相关的问题
