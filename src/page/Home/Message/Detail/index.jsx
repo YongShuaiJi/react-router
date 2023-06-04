@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import qs from 'querystringify'
+import qs from 'querystringify'
 
 const temp = [
     {id: 1, name:'小王', phone: '13811112222'},
